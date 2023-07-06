@@ -1,13 +1,13 @@
 var questions = [
     {
       question: "Question 1: What is 2 + 2?",
-      options: ["A. 3", "B. 4", "C. 5", "D. 6"],
-      answer: "B"
+      options: ["A. 69", "B. 4", "C. 1 million", "D. 26"],
+      answer: "1"
     },
     {
       question: "Question 2: What is 5 + 3?",
-      options: ["A. 6", "B. 7", "C. 8", "D. 9"],
-      answer: "C"
+      options: ["A. 20", "B. 6001", "C. 8", "D. 519"],
+      answer: "2"
     },
  
   ];
@@ -15,14 +15,14 @@ var questions = [
   var score = 0;
   var time = 60; // Time in seconds
   var timerInterval;
-  
+  var message = document.getElementById("message")
   var startButton = document.getElementById("start");
   var quizContainer = document.getElementById("quiz");
   var questionElement = document.getElementById("question");
   var optionsElement = document.getElementById("options");
   var timerElement = document.getElementById("timer");
   var scoreElement = document.getElementById("score");
-  
+  var users = []
   function startQuiz() {
     startButton.style.display = "none";
     quizContainer.style.display = "block";
@@ -33,6 +33,7 @@ var questions = [
   }
   
   function showQuestion() {
+    message.textContent = "";
     if (currentQuestionIndex < questions.length) {
       var currentQuestion = questions[currentQuestionIndex];
       questionElement.textContent = currentQuestion.question;
@@ -57,15 +58,18 @@ var questions = [
     var currentQuestion = questions[currentQuestionIndex];
   
     if (selectedAnswer === currentQuestion.answer) {
-      score += 10;
+        message.textContent ="Correct"
     }
-  
+  else {
+    message.textContent = "Wrong"
+    time=time-10
+  }
     currentQuestionIndex++;
   
     if (currentQuestionIndex < questions.length) {
-      showQuestion();
+      setTimeout(showQuestion,1000);
     } else {
-      endQuiz();
+     setTimeout(endQuiz,1000);
     }
   }
   
@@ -86,10 +90,13 @@ var questions = [
   function endQuiz() {
     clearInterval(timerInterval);
     quizContainer.style.display = "none";
-    scoreElement.textContent = "Final Score: " + score;
+    scoreElement.textContent = "Final Score: " + time;
     scoreElement.style.display = "block";
     var initials = prompt("Quiz over! Enter your initials:");
-    // Save initials and score here
+    users.push({
+        initials,score:time
+    })
+   localStorage.setItem("users",JSON.stringify(users))
   }
   
   startButton.addEventListener("click", startQuiz);
