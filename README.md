@@ -17,7 +17,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.![Alt text](ch4.jpeg)
 
 https://brettburrington.github.io/Challenge-4/
 
@@ -27,7 +27,9 @@ Provide instructions and examples for use. Include screenshots as needed.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-![Alt text](screencapture-file-C-Users-bburr-Downloads-challenge-4-index-html-2023-07-06-17_48_17.png)
+"C:\Users\bburr\Downloads\Cahllenge-2\ch4.jpeg"
+
+![Alt text]
 ## Credits
 my tutor phillip loy helped me as well as an outside friend.
 
