@@ -58,4 +58,8 @@ button:hover {
   font-weight: bold;
   display: none;
 }
-
+@media screen and (max-width:578px) {
+  .col1{
+     width:100%;
+  }   
+}
