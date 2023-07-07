@@ -1,19 +1,43 @@
 var questions = [
     {
-        question: "Question 1: What is 2 + 2?",
-        options: ["A. 69", "B. 4", "C. 1 million", "D. 26"],
+        question: "The____is the file used to personalize the look and design of your webpage. ",
+        options: ["A. index.html", "B. style.css", "C. script.js", "D.style.js"],
         answer: "1"
     },
     {
-        question: "Question 2: What is 5 + 3?",
-        options: ["A. 20", "B. 6001", "C. 8", "D. 519"],
-        answer: "2"
+        question: "You can chose whether or not to link your style.css to you index.HTML files.",
+        options: ["A. False", "B. True", ],
+        answer: "0"
+
+        
     },
+    {
+        question: "Which file is used to add interactivity and functionality to a web page?",
+        options: ["A. index.html", "B. style.js","C.script.css", "D.script.js" ],
+        answer: "3"
+
+        
+    }, 
+    {
+        question: "In Java, the entry point of a program is the __________ method",
+        options: ["A. Main", "B. Output","C.Variable", "D.Straight" ],
+        answer: "0"
+
+        
+    },
+    {
+        question: "Which of the following is an example of a block-level element in HTML?",
+        options: ["A. <span>", "B. <div>","C.<p>", "D.<a>" ],
+        answer: "1"
+
+        
+    },
+  
 
 ];
 var currentQuestionIndex = 0;
 var score = 0;
-var time = 60; // Time in seconds
+var time = 100; // Time in seconds
 var timerInterval;
 var message = document.getElementById("message")
 var startButton = document.getElementById("start");
@@ -26,8 +50,8 @@ var users = []
 function startQuiz() {
     startButton.style.display = "none";
     quizContainer.style.display = "block";
-    score = 0; // Reset score
-    time = 60; // Reset time
+    score = 0; 
+    time = 100;
     startTimer();
     showQuestion();
 }
